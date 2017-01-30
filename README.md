@@ -8,6 +8,7 @@ The Text Chat Accelerator Pack provides functionality you can add to your OpenTo
 
 # Text Chat Accelerator Pack Examples <br/>
 
+![default](./default.png) ![custom](./custom.png)
 
 ## JSON Requirements for Text Chat Signaling
 
