@@ -20,7 +20,7 @@ static OTAcceleratorSession *sharedSession;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    sharedSession = [[OTAcceleratorSession alloc] initWithOpenTokApiKey:@"100" sessionId:@"2_MX4xMDB-fjE0ODExNDkzMDc0MDl-Rk8wRzRrRXVnYkwwT09oTStxcnpXSEtNfn4" token:@"T1==cGFydG5lcl9pZD0xMDAmc2RrX3ZlcnNpb249dGJwaHAtdjAuOTEuMjAxMS0wNy0wNSZzaWc9ZmQ3YzQ2YjlmM2Y4MGEzNjdmMzU2YmNiZmEyNGU3ZTQwMjUzMzdlNDpzZXNzaW9uX2lkPTJfTVg0eE1EQi1makUwT0RFeE5Ea3pNRGMwTURsLVJrOHdSelJyUlhWbllrd3dUMDlvVFN0eGNucFhTRXROZm40JmNyZWF0ZV90aW1lPTE0ODExNDkxNzkmcm9sZT1tb2RlcmF0b3Imbm9uY2U9MTQ4MTE0OTE3OS44MzQ3MjA3MzgwMDI3JmV4cGlyZV90aW1lPTE0ODM3NDExNzk="];
+//    sharedSession = [[OTAcceleratorSession alloc] initWithOpenTokApiKey:<#apikey#> sessionId:<#sessionid#> token:<#token#>];
     return YES;
 }
 

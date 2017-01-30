@@ -1,5 +1,7 @@
 ![logo](./tokbox-logo.png)
 
+[![Build Status](https://travis-ci.com/opentok/accelerator-textchat-ios.svg?token=Bgz48rVAyAihVsymz2iz&branch=master)](https://travis-ci.com/opentok/accelerator-textchat-ios)
+
 # Text Chat Accelerator Pack iOS <br/>
 
 The Text Chat Accelerator Pack provides functionality you can add to your OpenTok applications that enables users to exchange text messages between mobile or browser-based devices.
