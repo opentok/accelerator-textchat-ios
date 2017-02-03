@@ -1,5 +1,5 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 target 'OTTextChatKit' do 
-  pod 'OTAcceleratorPackUtil', '2.0.6'
+  pod 'OTAcceleratorCore', '1.0.1'
 end

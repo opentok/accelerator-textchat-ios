@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
     'OTTextChatKitBundle' => ['OTTextChatKitBundle/**/*']
   }
 
-  s.dependency 'OTAcceleratorPackUtil', '2.0.6'
+  s.dependency 'OTAcceleratorCore', '1.0.1'
 end
