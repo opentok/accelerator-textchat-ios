@@ -6,8 +6,8 @@ env:
   global:
   - LANG=en_US.UTF-8
 
-  - WORKSPACE="OTTextChatKit.xcworkspace"
-  - IOS_SCHEME="OTTextChatKit"
+  - WORKSPACE="OTTextChatAccelerator.xcworkspace"
+  - IOS_SCHEME="OTTextChatAccelerator"
   - IOS_SDK=iphonesimulator10.0
 
   matrix:

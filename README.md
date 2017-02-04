@@ -1,6 +1,7 @@
 ![logo](./tokbox-logo.png)
 
 [![Build Status](https://travis-ci.com/opentok/accelerator-textchat-ios.svg?token=Bgz48rVAyAihVsymz2iz&branch=master)](https://travis-ci.com/opentok/accelerator-textchat-ios)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 # Text Chat Accelerator Pack iOS <br/>
 
