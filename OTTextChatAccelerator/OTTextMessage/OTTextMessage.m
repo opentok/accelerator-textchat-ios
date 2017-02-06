@@ -19,19 +19,6 @@ static NSString * const kCustomData = @"customData";
 
 @implementation OTTextMessage
 
-- (instancetype)initWithMessage:(NSString *)message
-                          alias:(NSString *)alias
-                       senderId:(NSString *)senderId {
-    if (self = [super init]) {
-        _alias = alias.length ? alias : @"Tokboxer";
-        _senderId = senderId.length ? senderId : [[NSUUID UUID] UUIDString];
-        _text = message;
-        _type = TCMessageTypesSent;
-        _dateTime = [[NSDate alloc] init];
-    }
-    return self;
-}
-
 + (instancetype)messageWithSenderId:(NSString *)senderId
                               alias:(NSString *)alias
                                text:(NSString *)text {
@@ -53,6 +40,7 @@ static NSString * const kCustomData = @"customData";
         _alias = [alias copy];
         _dateTime = [dateTime copy];
         _text = [text copy];
+        _type = TCMessageTypesSent;
     }
     return self;
 }

@@ -53,55 +53,6 @@ typedef void (^OTTextChatMessageBlock)(OTTextChatMessageEventSignal signal, OTTe
 - (OTAcceleratorSession *)sessionOfOTTextChat:(OTTextChat *)textChat;
 @end
 
-/**
- *  The delegate of a OTTextChat object must confirm to the TextChatViewDelegate protocol.
- *  Optional methods of the protocol allow the delegate to notify the connectivity.
- */
-@protocol OTTextChatDelegate <NSObject>
-
-@optional
-/**
- *  Notifies the delegate that the text chat view finished sending the message, with or without an error.
- *
- *  @param textChat     The text chat component object.
- *  @param textMessage  The text message object.
- *  @param error        An error object, used by the text chat view, when there is an error sending a message.
- */
-- (void)textChat:(OTTextChat *)textChat didSendTextMessage:(OTTextMessage *)textMessage error:(NSError *)error;
-
-/**
- *  Notifies the delegate that the text chat view finished receiving the message, with or without an error.
- *
- *  @param textChat     The text chat component object.
- *  @param textMessage  The text message object.
- *  @param error        An error object, used by the text chat view, when there is an error receiving a message.
- */
-- (void)textChat:(OTTextChat *)textChat didReceiveTextMessage:(OTTextMessage *)textMessage error:(NSError *)error;
-
-/**
- *  Notifies the delegate the text chat view has established a text chat connection, with or without an error.
- *
- *  @param textChat The text chat component object.
- *  @param error    An error object. It can contain information related to a connection error, a nil value,
- *               or information indicating a successful connection.
- */
-- (void)textChat:(OTTextChat *)textChat didConnectWithError:(NSError *)error;
-
-/**
- *  Notifies the delegate that the text chat view has stopped a text chat connection, with or without an error.
- *
- *  @param textChat The text chat component object.
- *  @param error    An error object. It can contain information related to a disconnect error, a nil value,
- *               or information indicating a connection was successfully closed.
- */
-- (void)textChat:(OTTextChat *)textChat didDisConnectWithError:(NSError *)error;
-
-- (void)textChat:(OTTextChat *)textChat connectionCreated:(OTConnection *)connection;
-
-- (void)textChat:(OTTextChat *)textChat connectionDestroyed:(OTConnection *)connection;
-
-@end
-
 @interface OTTextChat : NSObject
 
 /**
@@ -112,13 +63,6 @@ typedef void (^OTTextChatMessageBlock)(OTTextChatMessageEventSignal signal, OTTe
 @property (weak, nonatomic) id<OTTextChatDataSource> dataSource;
 
 /**
- *  The object that acts as the delegate of the text chat view.
- *
- *  The delegate must adopt the TextChatDelegate protocol. The delegate is not retained.
- */
-@property (weak, nonatomic) id<OTTextChatDelegate> delegate;
-
-/**
  *  Initialize a new `OTTextChat` instsance.
  *
  *  @return A new `OTTextChat` instsance.
@@ -126,34 +70,41 @@ typedef void (^OTTextChatMessageBlock)(OTTextChatMessageEventSignal signal, OTTe
 - (instancetype)init;
 
 /**
- *  Establishes a text chat connection.
- */
-- (void)connect;
-
-/**
  *  Establishes a text chat connection with completion.
  *
  *  @param handler NS_ENUM for the various event signals.
  */
-- (void)connectWithHandler:(OTTextChatConnectionBlock)handler;
+- (void)connectWithHandler:(OTTextChatConnectionBlock)handler
+            messageHandler:(OTTextChatMessageBlock)messageHandler;
 
 /**
  *  Stops a text chat connection.
  */
 - (void)disconnect;
 
+/**
+ *  The alias of the sender client.
+ */
 @property (nonatomic) NSString *alias;
 
+/**
+ *  The alias of the receiver client.
+ */
 @property (readonly, nonatomic) NSString *receiverAlias;
 
+/**
+ *  The connection object of the sender client.
+ */
 @property (readonly, nonatomic) OTConnection *selfConnection;
 
-@property (copy, nonatomic) OTTextChatConnectionBlock connectionHandler;
-
-@property (copy, nonatomic) OTTextChatMessageBlock messageHandler;
-
+/**
+ *  Conveniently send a message with a given text.
+ */
 - (void)sendMessage:(NSString *)text;
 
+/**
+ *  Send a message with a OTTextMessage object.
+ */
 - (void)sendCustomMessage:(OTTextMessage *)textMessage;
 
 @end

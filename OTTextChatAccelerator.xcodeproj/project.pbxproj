@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A03C51031E49304700C8A69A /* browser-demo-textchat.html in Resources */ = {isa = PBXBuildFile; fileRef = A03C51021E49304700C8A69A /* browser-demo-textchat.html */; };
+		A03C51051E49331D00C8A69A /* OTTextChatAcceleratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A03C51041E49331D00C8A69A /* OTTextChatAcceleratorTests.m */; };
+		A03C51071E4933B800C8A69A /* OTTextChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A03C51061E4933B800C8A69A /* OTTextChatTests.m */; };
 		A056601C1DF8BC7E001F9032 /* GCDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A0565FFE1DF8BC7E001F9032 /* GCDHelper.m */; };
-		A056601D1DF8BC7E001F9032 /* OTTestingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A05660001DF8BC7E001F9032 /* OTTestingInfo.m */; };
 		A056601E1DF8BC7E001F9032 /* UIViewController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A05660021DF8BC7E001F9032 /* UIViewController+Helper.m */; };
 		A05660201DF8BC7E001F9032 /* OTTextChat.m in Sources */ = {isa = PBXBuildFile; fileRef = A05660051DF8BC7E001F9032 /* OTTextChat.m */; };
 		A05660211DF8BC7E001F9032 /* OTTextChatAcceleratorBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = A05660081DF8BC7E001F9032 /* OTTextChatAcceleratorBundle.m */; };
@@ -33,7 +35,6 @@
 		A05D92941D58FC480043F0E3 /* CustomTimestampTextChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A05D92931D58FC480043F0E3 /* CustomTimestampTextChatTableViewCell.m */; };
 		A05D92961D58FC560043F0E3 /* CustomTimestampTextChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05D92951D58FC560043F0E3 /* CustomTimestampTextChatTableViewCell.xib */; };
 		A05D92991D590AF10043F0E3 /* CustomDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A05D92981D590AF10043F0E3 /* CustomDateFormatter.m */; };
-		A061BA871D1D9B110020DDD8 /* OTTextChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0905E411D1D946300004217 /* OTTextChatTests.m */; };
 		A0A0E8951E459DEF003F319C /* OTTextChatAccelerator.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A0A0E8941E459DEF003F319C /* OTTextChatAccelerator.podspec */; };
 		A0A0E8971E459DF3003F319C /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = A0A0E8961E459DF3003F319C /* CHANGELOG.md */; };
 		A0A0E89B1E45A055003F319C /* OTTextChatAcceleratorBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A0A0E89A1E45A055003F319C /* OTTextChatAcceleratorBundle.bundle */; };
@@ -72,11 +73,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A03C51021E49304700C8A69A /* browser-demo-textchat.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "browser-demo-textchat.html"; sourceTree = "<group>"; };
+		A03C51041E49331D00C8A69A /* OTTextChatAcceleratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextChatAcceleratorTests.m; sourceTree = "<group>"; };
+		A03C51061E4933B800C8A69A /* OTTextChatTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextChatTests.m; sourceTree = "<group>"; };
 		A0565FFB1DF8BC7E001F9032 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		A0565FFD1DF8BC7E001F9032 /* GCDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDHelper.h; sourceTree = "<group>"; };
 		A0565FFE1DF8BC7E001F9032 /* GCDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDHelper.m; sourceTree = "<group>"; };
-		A0565FFF1DF8BC7E001F9032 /* OTTestingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTTestingInfo.h; sourceTree = "<group>"; };
-		A05660001DF8BC7E001F9032 /* OTTestingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTestingInfo.m; sourceTree = "<group>"; };
 		A05660011DF8BC7E001F9032 /* UIViewController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Helper.h"; sourceTree = "<group>"; };
 		A05660021DF8BC7E001F9032 /* UIViewController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Helper.m"; sourceTree = "<group>"; };
 		A05660041DF8BC7E001F9032 /* OTTextChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTTextChat.h; sourceTree = "<group>"; };
@@ -128,7 +130,6 @@
 		A0905E3B1D1D946300004217 /* TextChatReceivedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextChatReceivedTableViewCell.xib; sourceTree = "<group>"; };
 		A0905E3C1D1D946300004217 /* TextChatSentShortTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextChatSentShortTableViewCell.xib; sourceTree = "<group>"; };
 		A0905E3D1D1D946300004217 /* TextChatSentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextChatSentTableViewCell.xib; sourceTree = "<group>"; };
-		A0905E411D1D946300004217 /* OTTextChatTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextChatTests.m; sourceTree = "<group>"; };
 		A0905E791D1D952100004217 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0905E7B1D1D956500004217 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0A0E8941E459DEF003F319C /* OTTextChatAccelerator.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OTTextChatAccelerator.podspec; sourceTree = "<group>"; };
@@ -186,8 +187,6 @@
 			children = (
 				A0565FFD1DF8BC7E001F9032 /* GCDHelper.h */,
 				A0565FFE1DF8BC7E001F9032 /* GCDHelper.m */,
-				A0565FFF1DF8BC7E001F9032 /* OTTestingInfo.h */,
-				A05660001DF8BC7E001F9032 /* OTTestingInfo.m */,
 				A05660011DF8BC7E001F9032 /* UIViewController+Helper.h */,
 				A05660021DF8BC7E001F9032 /* UIViewController+Helper.m */,
 			);
@@ -232,6 +231,7 @@
 		A07B96861D1B6273002397EE = {
 			isa = PBXGroup;
 			children = (
+				A03C51021E49304700C8A69A /* browser-demo-textchat.html */,
 				A0A0E8961E459DF3003F319C /* CHANGELOG.md */,
 				A0A0E8941E459DEF003F319C /* OTTextChatAccelerator.podspec */,
 				A056601B1DF8BC7E001F9032 /* Podfile */,
@@ -302,7 +302,8 @@
 		A0905E3E1D1D946300004217 /* OTTextChatAcceleratorTests */ = {
 			isa = PBXGroup;
 			children = (
-				A0905E411D1D946300004217 /* OTTextChatTests.m */,
+				A03C51061E4933B800C8A69A /* OTTextChatTests.m */,
+				A03C51041E49331D00C8A69A /* OTTextChatAcceleratorTests.m */,
 				A0B8FFCA1E3FE52B009EBA2E /* OTTextMessageTests.m */,
 				A0905E791D1D952100004217 /* Info.plist */,
 			);
@@ -416,6 +417,7 @@
 				A05660291DF8BC7E001F9032 /* Podfile in Resources */,
 				A05D92871D583EEC0043F0E3 /* CustomSendTextChatTableViewCell.xib in Resources */,
 				A0A0E89B1E45A055003F319C /* OTTextChatAcceleratorBundle.bundle in Resources */,
+				A03C51031E49304700C8A69A /* browser-demo-textchat.html in Resources */,
 				A05D928F1D58463D0043F0E3 /* CustomReceiveTextChatTableViewCell.xib in Resources */,
 				A0D9E63F1D2480E400C6F73E /* Assets.xcassets in Resources */,
 				A0D9E6401D2480E400C6F73E /* LaunchScreen.storyboard in Resources */,
@@ -459,7 +461,6 @@
 				A0D9E63C1D2480DA00C6F73E /* AppDelegate.m in Sources */,
 				A05D928E1D58463D0043F0E3 /* CustomReceiveTextChatTableViewCell.m in Sources */,
 				A0DD4FF01D56725D00DA719B /* CustomTextChatTableViewController.m in Sources */,
-				A056601D1DF8BC7E001F9032 /* OTTestingInfo.m in Sources */,
 				A0D9E63D1D2480DA00C6F73E /* main.m in Sources */,
 				A0D9E63E1D2480DA00C6F73E /* DefaultTextChatTableViewController.m in Sources */,
 				A05660261DF8BC7E001F9032 /* OTTextChatViewController.m in Sources */,
@@ -488,8 +489,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A061BA871D1D9B110020DDD8 /* OTTextChatTests.m in Sources */,
 				A0B8FFCB1E3FE52B009EBA2E /* OTTextMessageTests.m in Sources */,
+				A03C51071E4933B800C8A69A /* OTTextChatTests.m in Sources */,
+				A03C51051E49331D00C8A69A /* OTTextChatAcceleratorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,7 +650,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -689,7 +691,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

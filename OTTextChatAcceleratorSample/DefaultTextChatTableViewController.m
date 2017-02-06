@@ -36,10 +36,13 @@
     
     __weak DefaultTextChatTableViewController *weakSelf = self;
     [self.textChat connectWithHandler:^(OTTextChatConnectionEventSignal signal, OTConnection *connection, NSError *error) {
-        
-    }];
-    
-    self.textChat.messageHandler = ^(OTTextChatMessageEventSignal signal, OTTextMessage *message, NSError *error) {
+        if (signal == OTTextChatConnectionEventSignalDidConnect) {
+            NSLog(@"Text Chat starts");
+        }
+        else if (signal == OTTextChatConnectionEventSignalDidDisconnect) {
+            NSLog(@"Text Chat stops");
+        }
+    } messageHandler:^(OTTextChatMessageEventSignal signal, OTTextMessage *message, NSError *error) {
         
         if (signal == OTTextChatMessageEventSignalDidSendMessage || signal == OTTextChatMessageEventSignalDidReceiveMessage) {
             
@@ -50,7 +53,7 @@
                 [weakSelf scrollTextChatTableViewToBottom];
             }
         }
-    };
+    }];
     
     [self.textChatInputView.sendButton addTarget:self action:@selector(sendTextMessage) forControlEvents:UIControlEventTouchUpInside];
     [self configureCountLabel];

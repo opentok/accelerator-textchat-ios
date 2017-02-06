@@ -8,30 +8,61 @@
 
 #import <XCTest/XCTest.h>
 #import "OTTextMessage.h"
+#import "OTTextMessage_Private.h"
 
 @interface OTTextMessageTests : XCTestCase
-@property (nonatomic) NSString *randomString;
+
 @end
 
 @implementation OTTextMessageTests
 
-+ (void)setup {
-    NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    
-    NSMutableString *randomString = [NSMutableString stringWithCapacity: 100*1024*1024];
-    
-    for (int i=0; i<100; i++) {
-        [randomString appendFormat: @"%c", [letters characterAtIndex: arc4random_uniform([letters length])]];
-    }
-}
-
-- (void)testTextMessageNil {
+- (void)testTextMessageInitFactory {
     OTTextMessage *tc = [OTTextMessage messageWithSenderId:@"1234" alias:@"Bob" text:@"text"];
     XCTAssertNotNil(tc);
     XCTAssertNotNil(tc.dateTime);
     XCTAssertTrue([tc.text isEqualToString:@"text"]);
     XCTAssertTrue([tc.alias isEqualToString:@"Bob"]);
     XCTAssertTrue([tc.senderId isEqualToString:@"1234"]);
+    XCTAssertTrue(tc.type == TCMessageTypesSent);
+}
+
+- (void)testTextMessageInit {
+    
+    NSDate *date = [NSDate date];
+    OTTextMessage *tc = [[OTTextMessage alloc] initWithSenderId:@"1234"
+                                                          alias:@"Bob"
+                                                       dateTime:date
+                                                           text:@"text"];
+    XCTAssertNotNil(tc);
+    XCTAssertTrue(tc.dateTime == date);
+    XCTAssertTrue([tc.text isEqualToString:@"text"]);
+    XCTAssertTrue([tc.alias isEqualToString:@"Bob"]);
+    XCTAssertTrue([tc.senderId isEqualToString:@"1234"]);
+    XCTAssertTrue(tc.type == TCMessageTypesSent);
+}
+
+- (void)testTextMessagType {
+    OTTextMessage *tc = [OTTextMessage messageWithSenderId:@"1234" alias:@"Bob" text:@"text"];
+    tc.type = TCMessageTypesReceived;
+    XCTAssertTrue(tc.type == TCMessageTypesReceived);
+    
+    tc.type = TCMessageTypesSentShort;
+    XCTAssertTrue(tc.type == TCMessageTypesSentShort);
+    
+    tc.type = TCMessageTypesReceivedShort;
+    XCTAssertTrue(tc.type == TCMessageTypesReceivedShort);
+}
+
+- (void)testJSONParser {
+    OTTextMessage *tc = [OTTextMessage messageWithSenderId:@"1234" alias:@"Bob" text:@"text"];
+    NSString *jsonString = [tc getTextChatSignalJSONString];
+    XCTAssertNotNil(jsonString);
+    OTTextMessage *tc1 = [[OTTextMessage alloc] initWithJSONString:jsonString];
+    
+    XCTAssertTrue([tc.senderId isEqualToString:tc1.senderId]);
+    XCTAssertTrue([tc.alias isEqualToString:tc1.alias]);
+    XCTAssertTrue([tc.text isEqualToString:tc1.text]);
+    XCTAssertTrue([tc.dateTime compare:tc1.dateTime] == NSOrderedSame);
 }
 
 @end

@@ -14,7 +14,6 @@
 
 #import "OTTextChatAcceleratorBundle.h"
 #import "GCDHelper.h"
-#import "OTTestingInfo.h"
 #import "Constant.h"
 #import "UIViewController+Helper.h"
 

@@ -53,14 +53,11 @@
             if (signal == OTTextChatConnectionEventSignalDidConnect) {
                 [senderIdentifiers addObject:self.textChat.selfConnection.connectionId];
             }
-            
-            if (signal == OTTextChatConnectionEventSignalDidDisconnect) {
-                [self.textChat connect];
+            else if (signal == OTTextChatConnectionEventSignalDidDisconnect) {
+                NSLog(@"Text Chat is stopped");
             }
         }
-    }];
-    
-    self.textChat.messageHandler = ^(OTTextChatMessageEventSignal signal, OTTextMessage *textMessage, NSError *error) {
+    } messageHandler:^(OTTextChatMessageEventSignal signal, OTTextMessage *textMessage, NSError *error) {
         if (signal == OTTextChatMessageEventSignalDidSendMessage || signal == OTTextChatMessageEventSignalDidReceiveMessage) {
             
             [weakSelf addTextMessage:textMessage];
@@ -71,7 +68,7 @@
                 weakSelf.textChatInputView.textField.text = nil;
             }
         }
-    };
+    }];
     
     [self configureBlurBackground];
     [self configureCustomCells];
