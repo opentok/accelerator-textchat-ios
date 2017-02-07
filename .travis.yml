@@ -35,3 +35,7 @@ script:
     xcodebuild clean build -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO | xcpretty -c;
   fi
 
+notifications:
+  slack:
+    rooms:
+      secure: EP4tKC/05pS1+DztuIKZF8EoCNuj24JnrJgg6SgV3oTJqayYLm8cuY18fNGWN0jLOQThoXuasiABWP2Gx/wJv/c2iDWZIZtr+MH6emqPFE7EzqsQktRrvwjICwBGr50C4bG2SZ8INgSXVxC9QvcgbM3SAQtSgqxsk8CHY6ar/q1lnahFBjuwr+Fzv3HSDs0rFMo0k7EaOQoqc2K/+TQvwDj39ZcbQDy0948YQU6wdbIsJoT74n6FwIvSnv6b7FI730LAoSEyC6/hxjWvHsq5E6apKI332HDjpXqYYvBpm023f9DDVVpYgX1L0KIsNYR3lIWXrA2fYCkmvfA7KEN7Oj0rniI9WINEiJqGOLDY5ADCoXbeuMZix6jle/lAAN9r7UxqAe4i+itJr1GkuYAQ7AnLuBPqGycc08uAOuhUvGUJA+gviYGjquxtbI3x9tOfzv3U/HIrntOiW1svcUcx2eeqj3Y7ft0GAChHVXlh3vunT5VoakqRVfsxwoUUIRmmKAi4yljUiiol15lWpbJhQJpS4XiyIYovsywmBQ/EE2xBAkoo6TmvPHDpT+nHH8Pb4LjVpFJlzfIQmiPtuSJCfufeVM0hHjdnkVh7dxQ6S8yoyVvoKZ64yd2sty8Jcx816ymqLCSlfXuqAJuBHVaW5P/rj+tU6PK5Odri8anWNDk=
