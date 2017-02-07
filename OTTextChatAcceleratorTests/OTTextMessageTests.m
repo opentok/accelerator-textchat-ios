@@ -54,7 +54,12 @@
 }
 
 - (void)testJSONParser {
-    OTTextMessage *tc = [OTTextMessage messageWithSenderId:@"1234" alias:@"Bob" text:@"text"];
+    NSDate *date = [NSDate date];
+    OTTextMessage *tc = [[OTTextMessage alloc] initWithSenderId:@"1234"
+                                                          alias:@"Bob"
+                                                       dateTime:date
+                                                           text:@"text"];
+    tc.customData = @{@"config":@"VGA"};
     NSString *jsonString = [tc getTextChatSignalJSONString];
     XCTAssertNotNil(jsonString);
     OTTextMessage *tc1 = [[OTTextMessage alloc] initWithJSONString:jsonString];
@@ -62,7 +67,8 @@
     XCTAssertTrue([tc.senderId isEqualToString:tc1.senderId]);
     XCTAssertTrue([tc.alias isEqualToString:tc1.alias]);
     XCTAssertTrue([tc.text isEqualToString:tc1.text]);
-    XCTAssertTrue([tc.dateTime compare:tc1.dateTime] == NSOrderedSame);
+//    XCTAssertTrue([tc.dateTime isEqualToDate:tc1.dateTime]);
+    XCTAssertTrue([tc.customData isEqualToDictionary:tc1.customData]);
 }
 
 @end

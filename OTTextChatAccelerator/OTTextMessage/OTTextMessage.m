@@ -74,7 +74,11 @@ static NSString * const kCustomData = @"customData";
         }
 
         if (dict[kSendOn] && [dict[kSendOn] isKindOfClass:[NSNumber class]]) {
-            _dateTime = [NSDate dateWithTimeIntervalSince1970:([dict[kSendOn] doubleValue] / 1000)];
+            _dateTime = [NSDate dateWithTimeIntervalSince1970:([dict[kSendOn] doubleValue] / 1000.0f)];
+        }
+        
+        if (dict[kCustomData] && [dict[kCustomData] isKindOfClass:[NSDictionary class]]) {
+            _customData = dict[kCustomData];
         }
 
         _type = TCMessageTypesReceived;
@@ -90,7 +94,7 @@ static NSString * const kCustomData = @"customData";
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
     json[kText] = self.text;
     json[kSender] = @{kSenderAlias: self.alias, kSenderId: self.senderId};
-    json[kSendOn] = @([self.dateTime timeIntervalSince1970] * 1000);
+    json[kSendOn] = @([self.dateTime timeIntervalSince1970] * 1000.0f);
     if (self.customData) {
         json[kCustomData] = self.customData;
     }
