@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "OTTextChatViewController.h"
 #import "OTTextChatAcceleratorBundle.h"
 
 @interface OTTextChatAcceleratorTests : XCTestCase
@@ -22,6 +23,9 @@
 - (void)testTextChatViewControllerNib {
     NSBundle *textChatViewBundle = [OTTextChatAcceleratorBundle textChatAcceleratorBundle];
     XCTAssertTrue([textChatViewBundle loadNibNamed:@"TextChatSentTableViewCell" owner:self options:nil].count == 1);
+    
+    OTTextChatViewController *textChatViewController = [OTTextChatViewController textChatViewController];
+    XCTAssertNotNil(textChatViewController);
 }
 
 - (void)testTextChatTableViewCellNibs {
