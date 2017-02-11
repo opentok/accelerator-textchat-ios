@@ -13,9 +13,7 @@
 #import "OTAcceleratorSession.h"
 
 #import "OTTextChatAcceleratorBundle.h"
-#import "GCDHelper.h"
 #import "Constant.h"
-#import "UIViewController+Helper.h"
 
 @interface OTTextChatViewController() <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate> {
     OTTextChatViewType typeOfTextChatTableView;
