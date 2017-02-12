@@ -16,7 +16,7 @@
 		A04AAA3F1E4E9E220071A002 /* OTTextChatNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A04AAA321E4E9E220071A002 /* OTTextChatNavigationBar.m */; };
 		A04AAA401E4E9E220071A002 /* OTTextChatTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A04AAA351E4E9E220071A002 /* OTTextChatTableView.m */; };
 		A04AAA411E4E9E220071A002 /* OTTextChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04AAA371E4E9E220071A002 /* OTTextChatViewController.m */; };
-		A04AAA421E4E9E220071A002 /* OTTextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A04AAA3A1E4E9E220071A002 /* OTTextMessage.m */; };
+		A04AAA481E510C810071A002 /* OTTextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A04AAA471E510C810071A002 /* OTTextMessage.m */; };
 		A05660201DF8BC7E001F9032 /* OTTextChat.m in Sources */ = {isa = PBXBuildFile; fileRef = A05660051DF8BC7E001F9032 /* OTTextChat.m */; };
 		A05660291DF8BC7E001F9032 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A056601B1DF8BC7E001F9032 /* Podfile */; };
 		A059B98F1D1DE771008F1F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0905E361D1D946300004217 /* Assets.xcassets */; };
@@ -87,9 +87,9 @@
 		A04AAA351E4E9E220071A002 /* OTTextChatTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextChatTableView.m; sourceTree = "<group>"; };
 		A04AAA361E4E9E220071A002 /* OTTextChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTTextChatViewController.h; sourceTree = "<group>"; };
 		A04AAA371E4E9E220071A002 /* OTTextChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextChatViewController.m; sourceTree = "<group>"; };
-		A04AAA391E4E9E220071A002 /* OTTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTTextMessage.h; sourceTree = "<group>"; };
-		A04AAA3A1E4E9E220071A002 /* OTTextMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextMessage.m; sourceTree = "<group>"; };
-		A04AAA3B1E4E9E220071A002 /* OTTextMessage_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTTextMessage_Private.h; sourceTree = "<group>"; };
+		A04AAA451E510C810071A002 /* OTTextMessage_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTTextMessage_Private.h; sourceTree = "<group>"; };
+		A04AAA461E510C810071A002 /* OTTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTTextMessage.h; sourceTree = "<group>"; };
+		A04AAA471E510C810071A002 /* OTTextMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextMessage.m; sourceTree = "<group>"; };
 		A0565FFB1DF8BC7E001F9032 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		A05660041DF8BC7E001F9032 /* OTTextChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTTextChat.h; sourceTree = "<group>"; };
 		A05660051DF8BC7E001F9032 /* OTTextChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextChat.m; sourceTree = "<group>"; };
@@ -167,7 +167,6 @@
 				A04AAA2A1E4E9E220071A002 /* OTTextChatAcceleratorBundle.m */,
 				A04AAA2B1E4E9E220071A002 /* OTTextChatTableViewCells */,
 				A04AAA2E1E4E9E220071A002 /* OTTextChatView */,
-				A04AAA381E4E9E220071A002 /* OTTextMessage */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -197,22 +196,15 @@
 			path = OTTextChatView;
 			sourceTree = "<group>";
 		};
-		A04AAA381E4E9E220071A002 /* OTTextMessage */ = {
-			isa = PBXGroup;
-			children = (
-				A04AAA391E4E9E220071A002 /* OTTextMessage.h */,
-				A04AAA3A1E4E9E220071A002 /* OTTextMessage.m */,
-				A04AAA3B1E4E9E220071A002 /* OTTextMessage_Private.h */,
-			);
-			path = OTTextMessage;
-			sourceTree = "<group>";
-		};
 		A0565FFA1DF8BC7E001F9032 /* OTTextChatAccelerator */ = {
 			isa = PBXGroup;
 			children = (
 				A0565FFB1DF8BC7E001F9032 /* Constant.h */,
 				A05660041DF8BC7E001F9032 /* OTTextChat.h */,
 				A05660051DF8BC7E001F9032 /* OTTextChat.m */,
+				A04AAA451E510C810071A002 /* OTTextMessage_Private.h */,
+				A04AAA461E510C810071A002 /* OTTextMessage.h */,
+				A04AAA471E510C810071A002 /* OTTextMessage.m */,
 				A04AAA281E4E9E220071A002 /* UI */,
 			);
 			path = OTTextChatAccelerator;
@@ -456,7 +448,7 @@
 				A04AAA3F1E4E9E220071A002 /* OTTextChatNavigationBar.m in Sources */,
 				A04AAA3D1E4E9E220071A002 /* OTTextChatTableViewCell.m in Sources */,
 				A05D92991D590AF10043F0E3 /* CustomDateFormatter.m in Sources */,
-				A04AAA421E4E9E220071A002 /* OTTextMessage.m in Sources */,
+				A04AAA481E510C810071A002 /* OTTextMessage.m in Sources */,
 				A04AAA401E4E9E220071A002 /* OTTextChatTableView.m in Sources */,
 				A04AAA411E4E9E220071A002 /* OTTextChatViewController.m in Sources */,
 				A05D92861D583EEC0043F0E3 /* CustomSendTextChatTableViewCell.m in Sources */,

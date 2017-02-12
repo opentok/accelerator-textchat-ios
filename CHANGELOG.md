@@ -9,6 +9,7 @@ The changelog for `Accelerator-TextChat` iOS.
 
 ### Enhacements
 
+- Add methods for sending a message to a connection
 - Support Subspec: now you can exclude the UI part if you are only interested in the real-time messaging core part by only specifying `pod 'OTTextChatAccelerator/Core'` in your Podfile
 
 1.0.1

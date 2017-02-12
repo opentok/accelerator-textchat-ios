@@ -22,6 +22,7 @@
     XCTAssertNil(textchat.alias);
     XCTAssertNil(textchat.receiverAlias);
     XCTAssertNil(textchat.selfConnection);
+    XCTAssertNil(textchat.dataSource);
 }
 
 - (void)testTextChatAlias {

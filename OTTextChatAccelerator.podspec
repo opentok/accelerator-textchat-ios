@@ -24,6 +24,9 @@ Pod::Spec.new do |s|
   s.subspec 'Core' do |s|
     s.source_files = 'OTTextChatAccelerator/Constant.h',
                         'OTTextChat.h',
-                        'OTTextChat.m'
+                        'OTTextChat.m',
+                        'OTTextMessage_Private.h',
+                        'OTTextMessage.h',
+                        'OTTextMessage.m'
   end
 end
