@@ -34,6 +34,15 @@
     
     senderIdentifiers = [[NSMutableSet alloc] init];
     
+    [self styleUI];
+    [self configureBlurBackground];
+    [self configureCustomCells];
+    [self.textChatInputView.sendButton addTarget:self action:@selector(sendTextMessage) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self setupTextMessage];
+}
+
+- (void)styleUI {
     self.textChat = [[OTTextChat alloc] init];
     self.textChat.dataSource = self;
     self.textChat.alias = @"BD Demo";
@@ -45,34 +54,6 @@
     
     self.textChatInputView.sendButton.layer.cornerRadius = 16.0f;
     self.textChatInputView.sendButton.backgroundColor = [UIColor colorWithRed:2/255.0f green:132/255.0f blue:196/255.0f alpha:1.0f];
-    
-    __weak CustomTextChatTableViewController *weakSelf = self;
-    [self.textChat connectWithHandler:^(OTTextChatConnectionEventSignal signal, OTConnection *connection, NSError *error) {
-        
-        if (!error) {
-            if (signal == OTTextChatConnectionEventSignalDidConnect) {
-                [senderIdentifiers addObject:self.textChat.selfConnection.connectionId];
-            }
-            else if (signal == OTTextChatConnectionEventSignalDidDisconnect) {
-                NSLog(@"Text Chat is stopped");
-            }
-        }
-    } messageHandler:^(OTTextChatMessageEventSignal signal, OTTextMessage *textMessage, NSError *error) {
-        if (signal == OTTextChatMessageEventSignalDidSendMessage || signal == OTTextChatMessageEventSignalDidReceiveMessage) {
-            
-            [weakSelf addTextMessage:textMessage];
-            [weakSelf.tableView reloadData];
-            [weakSelf scrollTextChatTableViewToBottom];
-            
-            if (signal == OTTextChatMessageEventSignalDidSendMessage) {
-                weakSelf.textChatInputView.textField.text = nil;
-            }
-        }
-    }];
-    
-    [self configureBlurBackground];
-    [self configureCustomCells];
-    [self.textChatInputView.sendButton addTarget:self action:@selector(sendTextMessage) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)configureCustomCells {
@@ -98,6 +79,32 @@
     self.providesPresentationContextTransitionStyle = YES;
     self.definesPresentationContext = YES;
     self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+}
+
+- (void)setupTextMessage {
+    __weak CustomTextChatTableViewController *weakSelf = self;
+    [self.textChat connectWithHandler:^(OTTextChatConnectionEventSignal signal, OTConnection *connection, NSError *error) {
+        
+        if (!error) {
+            if (signal == OTTextChatConnectionEventSignalDidConnect) {
+                [senderIdentifiers addObject:self.textChat.selfConnection.connectionId];
+            }
+            else if (signal == OTTextChatConnectionEventSignalDidDisconnect) {
+                NSLog(@"Text Chat is stopped");
+            }
+        }
+    } messageHandler:^(OTTextChatMessageEventSignal signal, OTTextMessage *textMessage, NSError *error) {
+        if (signal == OTTextChatMessageEventSignalDidSendMessage || signal == OTTextChatMessageEventSignalDidReceiveMessage) {
+            
+            [weakSelf addTextMessage:textMessage];
+            [weakSelf.tableView reloadData];
+            [weakSelf scrollTextChatTableViewToBottom];
+            
+            if (signal == OTTextChatMessageEventSignalDidSendMessage) {
+                weakSelf.textChatInputView.textField.text = nil;
+            }
+        }
+    }];
 }
 
 - (void)sendTextMessage {

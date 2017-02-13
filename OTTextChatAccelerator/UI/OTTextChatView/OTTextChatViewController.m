@@ -50,6 +50,15 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 130.0;
     
+    [self loadTableViewCells];
+    typeOfTextChatTableView = [self.tableView.textChatTableViewDelegate typeOfTextChatTableView:self.tableView];
+    if (typeOfTextChatTableView == OTTextChatViewTypeDefault && !self.navigationController) {
+        [self configureNavigationBar];
+    }
+    [self setupKeyboardNotification];
+}
+
+- (void)loadTableViewCells {
     NSBundle *textChatViewBundle = [OTTextChatAcceleratorBundle textChatAcceleratorBundle];
     [self.tableView registerNib:[UINib nibWithNibName:@"TextChatSentTableViewCell"
                                                bundle:textChatViewBundle]
@@ -70,33 +79,33 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"TextChatComponentDivTableViewCell"
                                                bundle:textChatViewBundle]
          forCellReuseIdentifier:@"Divider"];
+}
+
+- (void)configureNavigationBar {
+    self.textChatNavigationBar = [[OTTextChatNavigationBar alloc] init];
+    self.textChatNavigationBar.navigationBarHeight = 64.0f;
     
-    typeOfTextChatTableView = [self.tableView.textChatTableViewDelegate typeOfTextChatTableView:self.tableView];
-    if (typeOfTextChatTableView == OTTextChatViewTypeDefault && !self.navigationController) {
-        
-        self.textChatNavigationBar = [[OTTextChatNavigationBar alloc] init];
-        self.textChatNavigationBar.navigationBarHeight = 64.0f;
-        
-        [self.view addSubview:self.textChatNavigationBar];
-        
-        UINavigationItem *cancelNavigationItem = [[UINavigationItem alloc] init];
-        UIBarButtonItem *cancelBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"close_x_white" inBundle:[OTTextChatAcceleratorBundle textChatAcceleratorBundle] compatibleWithTraitCollection:nil] style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
-        cancelNavigationItem.rightBarButtonItem = cancelBarButtonItem;
-        self.textChatNavigationBar.items = @[cancelNavigationItem];
-        
-        // add top constraint
-        self.topLayoutConstraint.active = NO;
-        self.topLayoutConstraint = nil;
-        self.topLayoutConstraint = [NSLayoutConstraint constraintWithItem:self.tableView
-                                                                attribute:NSLayoutAttributeTop
-                                                                relatedBy:NSLayoutRelationEqual
-                                                                   toItem:self.textChatNavigationBar
-                                                                attribute:NSLayoutAttributeBottom
-                                                               multiplier:1.0
-                                                                 constant:0.0];
-        self.topLayoutConstraint.active = YES;
-    }
+    [self.view addSubview:self.textChatNavigationBar];
     
+    UINavigationItem *cancelNavigationItem = [[UINavigationItem alloc] init];
+    UIBarButtonItem *cancelBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"close_x_white" inBundle:[OTTextChatAcceleratorBundle textChatAcceleratorBundle] compatibleWithTraitCollection:nil] style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
+    cancelNavigationItem.rightBarButtonItem = cancelBarButtonItem;
+    self.textChatNavigationBar.items = @[cancelNavigationItem];
+    
+    // add top constraint
+    self.topLayoutConstraint.active = NO;
+    self.topLayoutConstraint = nil;
+    self.topLayoutConstraint = [NSLayoutConstraint constraintWithItem:self.tableView
+                                                            attribute:NSLayoutAttributeTop
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:self.textChatNavigationBar
+                                                            attribute:NSLayoutAttributeBottom
+                                                           multiplier:1.0
+                                                             constant:0.0];
+    self.topLayoutConstraint.active = YES;
+}
+
+- (void)setupKeyboardNotification {
     __weak OTTextChatViewController *weakSelf = self;
     [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardWillShowNotification
                                                       object:nil
@@ -107,10 +116,10 @@
                                                       CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
                                                       double duration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
                                                       [UIView animateWithDuration:duration animations:^{
-
+                                                          
                                                           weakSelf.bottomViewLayoutConstraint.constant = kbSize.height;
                                                       } completion:^(BOOL finished) {
-
+                                                          
                                                           [weakSelf scrollTextChatTableViewToBottom];
                                                       }];
                                                   }];
