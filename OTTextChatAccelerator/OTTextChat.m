@@ -111,11 +111,21 @@ static NSString* const kTextChatType = @"text-chat";
 }
 
 - (void)sendMessage:(NSString *)text {
-    
     [self sendCustomMessage:[OTTextMessage messageWithSenderId:self.selfConnection.connectionId alias:self.alias text:text]];
 }
 
+- (void)sendMessage:(NSString *)text
+       toConnection:(OTConnection *)connection {
+    [self sendCustomMessage:[OTTextMessage messageWithSenderId:self.selfConnection.connectionId alias:self.alias text:text] toConnection:nil];
+}
+
 - (void)sendCustomMessage:(OTTextMessage *)textMessage {
+    [self sendCustomMessage:textMessage toConnection:nil];
+}
+
+- (void)sendCustomMessage:(OTTextMessage *)textMessage
+             toConnection:(OTConnection *)connection {
+    
     NSError *error;
     
     [self.logger logEventAction:KLogActionSendMessage variation:KLogVariationAttempt completion:nil];
@@ -144,14 +154,14 @@ static NSString* const kTextChatType = @"text-chat";
                                                  userInfo:@{NSLocalizedDescriptionKey:@"Error in parsing sender data"}];
                 self.messageHandler(OTTextChatMessageEventSignalDidSendMessage, nil, error);
             }
-
+            
             [self.logger logEventAction:KLogActionSendMessage variation:KLogVariationFailure completion:nil];
             return;
         }
         
         [self.session signalWithType:kTextChatType
                               string:jsonString
-                          connection:nil
+                          connection:connection
                                error:&error];
         
         if (error) {
@@ -173,7 +183,7 @@ static NSString* const kTextChatType = @"text-chat";
         error = [NSError errorWithDomain:NSCocoaErrorDomain
                                     code:-1
                                 userInfo:@{NSLocalizedDescriptionKey:@"OTSession did not connect"}];
-
+        
         [self.logger logEventAction:KLogActionSendMessage variation:KLogVariationFailure completion:nil];
         
         if (self.messageHandler) {

@@ -98,13 +98,25 @@ typedef void (^OTTextChatMessageBlock)(OTTextChatMessageEventSignal signal, OTTe
 @property (readonly, nonatomic) OTConnection *selfConnection;
 
 /**
- *  Conveniently send a message with a given text.
+ *  Conveniently broadcast a message with a given text.
  */
 - (void)sendMessage:(NSString *)text;
 
 /**
- *  Send a message with a OTTextMessage object.
+ *  Conveniently send a message with a given text to a given connection.
+ */
+- (void)sendMessage:(NSString *)text
+       toConnection:(OTConnection *)connection;
+
+/**
+ *  Broadcast a message with a OTTextMessage object.
  */
 - (void)sendCustomMessage:(OTTextMessage *)textMessage;
+
+/**
+ *  Send a message with a OTTextMessage object to a given connection.
+ */
+- (void)sendCustomMessage:(OTTextMessage *)textMessage
+             toConnection:(OTConnection *)connection;
 
 @end
