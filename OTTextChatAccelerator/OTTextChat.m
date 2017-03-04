@@ -136,7 +136,7 @@ static NSString* const kTextChatType = @"text-chat";
                                 userInfo:@{NSLocalizedDescriptionKey:@"Message format is wrong. Text is empty or null"}];
         
         if (self.messageHandler) {
-            self.messageHandler(OTTextChatMessageEventSignalDidSendMessage, textMessage, nil);
+            self.messageHandler(OTTextChatMessageEventSignalDidSendMessage, nil, error);
         }
         
         [self.logger logEventAction:KLogActionSendMessage variation:KLogVariationFailure completion:nil];

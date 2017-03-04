@@ -4,6 +4,13 @@ The changelog for `Accelerator-TextChat` iOS.
 
 --------------------------------------
 
+1.0.3
+-----
+
+### Fixes
+
+- Fix a bug that `nil` message is treated as a successful case.
+
 1.0.2
 -----
 
