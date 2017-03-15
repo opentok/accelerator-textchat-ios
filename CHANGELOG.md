@@ -1,4 +1,4 @@
-NGELOG
+# CHANGELOG
 
 The changelog for `Accelerator-TextChat` iOS.
 
