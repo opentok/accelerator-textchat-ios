@@ -11,7 +11,6 @@
 #import "OTTextMessage.h"
 #import "OTTextMessage_Private.h"
 
-#import "OTTextChatAcceleratorBundle.h"
 #import "Constant.h"
 
 static NSString* const kTextChatType = @"text-chat";
