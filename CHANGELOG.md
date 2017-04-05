@@ -10,6 +10,11 @@ The changelog for `Accelerator-TextChat` iOS.
 ### Fixes
 
 - Fix a bug that `nil` message is treated as a successful case.
+- Fix a file reference issue on Subspec
+
+### Breaking changes 
+
+- Remove `receiverAlias` property on `OTTextChat` as the information is available on `OTTextMessage`
 
 1.0.2
 -----

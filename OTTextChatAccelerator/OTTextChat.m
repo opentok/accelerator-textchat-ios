@@ -20,7 +20,6 @@ static NSString* const kTextChatType = @"text-chat";
 
 @property (nonatomic) OTAcceleratorSession *session;
 @property (nonatomic) OTKLogger *logger;
-@property (nonatomic) NSString *receiverAlias;
 @property (nonatomic) OTConnection *selfConnection;
 
 @property (copy, nonatomic) OTTextChatConnectionBlock connectionHandler;
@@ -256,10 +255,6 @@ receivedSignalType:(NSString*)type
         [self.logger logEventAction:KLogActionReceiveMessage variation:KLogVariationAttempt completion:nil];
         
         OTTextMessage *textMessage = [[OTTextMessage alloc] initWithJSONString:string];
-        
-        if (!self.receiverAlias || ![self.receiverAlias isEqualToString:textMessage.alias]) {
-            self.receiverAlias = textMessage.alias;
-        }
         
         if (textMessage) {
             

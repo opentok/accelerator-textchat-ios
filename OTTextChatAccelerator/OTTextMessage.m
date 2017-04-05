@@ -12,9 +12,7 @@ static NSString * const kText = @"text";
 static NSString * const kSender = @"sender";
 static NSString * const kSenderAlias = @"alias";
 static NSString * const kSenderId = @"id";
-
 static NSString * const kSendOn = @"sentOn";
-
 static NSString * const kCustomData = @"customData";
 
 @implementation OTTextMessage

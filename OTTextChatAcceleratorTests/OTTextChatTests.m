@@ -20,7 +20,6 @@
     OTTextChat *textchat = [[OTTextChat alloc] init];
     XCTAssertNotNil(textchat);
     XCTAssertNil(textchat.alias);
-    XCTAssertNil(textchat.receiverAlias);
     XCTAssertNil(textchat.selfConnection);
     XCTAssertNil(textchat.dataSource);
 }
