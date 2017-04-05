@@ -1,5 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "OTTextChatAccelerator"
+
   s.version          = "1.0.3"
   s.summary          = "OpenTok Text Chat Accelerator Pack enables text messages between mobile or browser-based devices."
 
