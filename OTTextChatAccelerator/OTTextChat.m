@@ -11,7 +11,6 @@
 #import "OTTextMessage.h"
 #import "OTTextMessage_Private.h"
 
-#import "OTTextChatAcceleratorBundle.h"
 #import "Constant.h"
 
 static NSString* const kTextChatType = @"text-chat";
@@ -20,7 +19,6 @@ static NSString* const kTextChatType = @"text-chat";
 
 @property (nonatomic) OTAcceleratorSession *session;
 @property (nonatomic) OTKLogger *logger;
-@property (nonatomic) NSString *receiverAlias;
 @property (nonatomic) OTConnection *selfConnection;
 
 @property (copy, nonatomic) OTTextChatConnectionBlock connectionHandler;
@@ -136,7 +134,7 @@ static NSString* const kTextChatType = @"text-chat";
                                 userInfo:@{NSLocalizedDescriptionKey:@"Message format is wrong. Text is empty or null"}];
         
         if (self.messageHandler) {
-            self.messageHandler(OTTextChatMessageEventSignalDidSendMessage, textMessage, nil);
+            self.messageHandler(OTTextChatMessageEventSignalDidSendMessage, nil, error);
         }
         
         [self.logger logEventAction:KLogActionSendMessage variation:KLogVariationFailure completion:nil];
@@ -256,10 +254,6 @@ receivedSignalType:(NSString*)type
         [self.logger logEventAction:KLogActionReceiveMessage variation:KLogVariationAttempt completion:nil];
         
         OTTextMessage *textMessage = [[OTTextMessage alloc] initWithJSONString:string];
-        
-        if (!self.receiverAlias || ![self.receiverAlias isEqualToString:textMessage.alias]) {
-            self.receiverAlias = textMessage.alias;
-        }
         
         if (textMessage) {
             

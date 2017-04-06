@@ -88,11 +88,6 @@ typedef void (^OTTextChatMessageBlock)(OTTextChatMessageEventSignal signal, OTTe
 @property (nonatomic) NSString *alias;
 
 /**
- *  The alias of the receiver client.
- */
-@property (readonly, nonatomic) NSString *receiverAlias;
-
-/**
  *  The connection object of the sender client.
  */
 @property (readonly, nonatomic) OTConnection *selfConnection;

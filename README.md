@@ -19,7 +19,7 @@ The Text Chat Accelerator Pack provides functionality you can add to your OpenTo
 
 1. Get values for **API Key**, **Session ID**, and **Token**. See [Obtaining OpenTok Credentials](#obtaining-opentok-credentials) for important information.
 
-1. Install CocoaPods as described in [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html#getting-started).
+1. Install CocoaPods as described in [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html#getting-started). If you are only interested in the core part without UI component, you can use this `pod 'OTTextChatAccelerator/Core'`
 
 1. In Terminal, `cd` to your project directory and type `pod install`.
 

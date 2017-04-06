@@ -38,6 +38,7 @@
 		A0A0E89B1E45A055003F319C /* OTTextChatAcceleratorBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A0A0E89A1E45A055003F319C /* OTTextChatAcceleratorBundle.bundle */; };
 		A0B8FFCB1E3FE52B009EBA2E /* OTTextMessageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8FFCA1E3FE52B009EBA2E /* OTTextMessageTests.m */; };
 		A0B8FFCD1E3FE7F6009EBA2E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A0B8FFCC1E3FE7F6009EBA2E /* README.md */; };
+		A0C142BB1E958B5E000120E4 /* OTTextChatUserInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C142BA1E958B5E000120E4 /* OTTextChatUserInterface.m */; };
 		A0D9E63C1D2480DA00C6F73E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0905DDC1D1D946300004217 /* AppDelegate.m */; };
 		A0D9E63D1D2480DA00C6F73E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0905DE31D1D946300004217 /* main.m */; };
 		A0D9E63E1D2480DA00C6F73E /* DefaultTextChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0905DE51D1D946300004217 /* DefaultTextChatTableViewController.m */; };
@@ -131,6 +132,7 @@
 		A0A0E89A1E45A055003F319C /* OTTextChatAcceleratorBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = OTTextChatAcceleratorBundle.bundle; sourceTree = "<group>"; };
 		A0B8FFCA1E3FE52B009EBA2E /* OTTextMessageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextMessageTests.m; sourceTree = "<group>"; };
 		A0B8FFCC1E3FE7F6009EBA2E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A0C142BA1E958B5E000120E4 /* OTTextChatUserInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextChatUserInterface.m; sourceTree = "<group>"; };
 		A0DD4FEE1D56725D00DA719B /* CustomTextChatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextChatTableViewController.h; sourceTree = "<group>"; };
 		A0DD4FEF1D56725D00DA719B /* CustomTextChatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextChatTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -287,6 +289,7 @@
 				A03C51061E4933B800C8A69A /* OTTextChatTests.m */,
 				A03C51041E49331D00C8A69A /* OTTextChatAcceleratorTests.m */,
 				A0B8FFCA1E3FE52B009EBA2E /* OTTextMessageTests.m */,
+				A0C142BA1E958B5E000120E4 /* OTTextChatUserInterface.m */,
 				A0905E791D1D952100004217 /* Info.plist */,
 			);
 			path = OTTextChatAcceleratorTests;
@@ -469,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C142BB1E958B5E000120E4 /* OTTextChatUserInterface.m in Sources */,
 				A0B8FFCB1E3FE52B009EBA2E /* OTTextMessageTests.m in Sources */,
 				A03C51071E4933B800C8A69A /* OTTextChatTests.m in Sources */,
 				A03C51051E49331D00C8A69A /* OTTextChatAcceleratorTests.m in Sources */,
