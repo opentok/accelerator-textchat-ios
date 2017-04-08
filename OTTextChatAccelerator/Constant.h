@@ -9,7 +9,7 @@
 
 // Analytics constants
 static NSString* const kLogComponentIdentifier = @"textChatAccPack";
-static NSString* const KLogClientVersion = @"ios-vsol-2.0.0";
+static NSString* const KLogClientVersion = @"ios-accelerator-textchat-1.0.4";
 static NSString* const KLogActionInitialize = @"Init";
 static NSString* const KLogActionStart = @"Start";
 static NSString* const KLogActionEnd = @"End";
