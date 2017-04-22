@@ -1,13 +1,11 @@
 ![logo](./tokbox-logo.png)
 
-[![Build Status](https://travis-ci.org/opentok/accelerator-textchat-ios.svg?branch=master)](https://travis-ci.org/opentok/accelerator-textchat-ios)
-[![Version Status](https://img.shields.io/cocoapods/v/OTTextChatAccelerator.svg)](https://cocoapods.org/pods/OTTextChatAccelerator)
-[![license MIT](https://img.shields.io/cocoapods/l/OTTextChatAccelerator.svg)](https://cocoapods.org/pods/OTTextChatAccelerator)
-[![Platform](https://img.shields.io/cocoapods/p/OTTextChatAccelerator.svg)](https://cocoapods.org/pods/OTTextChatAccelerator)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![codebeat badge](https://codebeat.co/badges/cfd17e02-576e-4e4b-9606-290dbe5dbf1c)](https://codebeat.co/projects/github-com-opentok-accelerator-textchat-ios)
-
 # Text Chat Accelerator Pack iOS <br/>
+
+[![Build Status](https://travis-ci.org/opentok/accelerator-textchat-ios.svg?branch=master)](https://travis-ci.org/opentok/accelerator-textchat-ios)
+[![GitHub release](https://img.shields.io/github/release/opentok/accelerator-textchat-ios.svg)](./README.md)
+[![license MIT](https://img.shields.io/cocoapods/l/OTTextChatAccelerator.svg)](https://cocoapods.org/pods/OTTextChatAccelerator)
+[![Version Status](https://img.shields.io/cocoapods/v/OTTextChatAccelerator.svg)](https://cocoapods.org/pods/OTTextChatAccelerator)
 
 The Text Chat Accelerator Pack provides functionality you can add to your OpenTok applications that enables users to exchange text messages between mobile or browser-based devices.
 
