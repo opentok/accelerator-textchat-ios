@@ -4,6 +4,11 @@ The changelog for `Accelerator-TextChat` iOS.
 
 --------------------------------------
 
+1.0.4
+-----
+
+- Update Accelerator Core version to 1.1.5
+
 1.0.3
 -----
 
