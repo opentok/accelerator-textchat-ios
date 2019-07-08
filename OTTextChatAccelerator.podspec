@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
     'OTTextChatAcceleratorBundle' => ['OTTextChatAcceleratorBundle/**/*']
   }
 
+  s.static_framework = true
   s.dependency 'OTAcceleratorCore'
 
   s.subspec 'Core' do |s|
