@@ -1,3 +1,5 @@
+platform :ios, '10.0'
+
 project 'OTTextChatAccelerator.xcodeproj'
 
 target 'OTTextChatAccelerator' do
