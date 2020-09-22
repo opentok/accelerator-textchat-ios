@@ -50,6 +50,8 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 130.0;
     
+    self.textChatInputView.textField.textColor = [UIColor darkGrayColor];
+    
     [self loadTableViewCells];
     typeOfTextChatTableView = [self.tableView.textChatTableViewDelegate typeOfTextChatTableView:self.tableView];
     if (typeOfTextChatTableView == OTTextChatViewTypeDefault && !self.navigationController) {

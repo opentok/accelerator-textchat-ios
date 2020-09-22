@@ -70,6 +70,7 @@
     countLabel.text = [NSString stringWithFormat:@"%@", @(maximumTextMessageLength)];
     countLabel.textAlignment = NSTextAlignmentCenter;
     countLabel.font = [UIFont systemFontOfSize:10.0f];
+    countLabel.textColor = [UIColor darkGrayColor];
     [self.textChatInputView.textField addSubview:countLabel];
     
     [NSLayoutConstraint constraintWithItem:countLabel
@@ -134,7 +135,7 @@
 
 
 -(void)updateLabel:(NSUInteger)Charlength {
-    countLabel.textColor = [UIColor blackColor];
+    countLabel.textColor = [UIColor darkGrayColor];
     
     NSUInteger charLeft = maximumTextMessageLength - Charlength;
     NSUInteger closeEnd = round(maximumTextMessageLength * .1);
