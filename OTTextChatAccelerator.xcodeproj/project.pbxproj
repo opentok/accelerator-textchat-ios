@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51E1D3C4F20A33DAA65CDD04 /* libPods-OTTextChatAcceleratorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98810AC2E1D0E1D930FBCEBF /* libPods-OTTextChatAcceleratorTests.a */; };
+		9EF12E921F1D30D13C75F48F /* libPods-OTTextChatAccelerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA27C8A30A2F0D8E254F8B20 /* libPods-OTTextChatAccelerator.a */; };
 		A03C51031E49304700C8A69A /* browser-demo-textchat.html in Resources */ = {isa = PBXBuildFile; fileRef = A03C51021E49304700C8A69A /* browser-demo-textchat.html */; };
 		A03C51051E49331D00C8A69A /* OTTextChatAcceleratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A03C51041E49331D00C8A69A /* OTTextChatAcceleratorTests.m */; };
 		A03C51071E4933B800C8A69A /* OTTextChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A03C51061E4933B800C8A69A /* OTTextChatTests.m */; };
@@ -70,6 +72,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09E532CF8929126918B1D69A /* Pods-OTTextChatAccelerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTTextChatAccelerator.release.xcconfig"; path = "Target Support Files/Pods-OTTextChatAccelerator/Pods-OTTextChatAccelerator.release.xcconfig"; sourceTree = "<group>"; };
+		120404A92851B02AEB6CBB2F /* Pods-OTTextChatAccelerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTTextChatAccelerator.debug.xcconfig"; path = "Target Support Files/Pods-OTTextChatAccelerator/Pods-OTTextChatAccelerator.debug.xcconfig"; sourceTree = "<group>"; };
+		742B56559D9BE67219DFCD07 /* Pods-OTTextChatAcceleratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTTextChatAcceleratorTests.debug.xcconfig"; path = "Target Support Files/Pods-OTTextChatAcceleratorTests/Pods-OTTextChatAcceleratorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		85D9AEE880B62BC0A22C50B9 /* Pods-OTTextChatAcceleratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTTextChatAcceleratorTests.release.xcconfig"; path = "Target Support Files/Pods-OTTextChatAcceleratorTests/Pods-OTTextChatAcceleratorTests.release.xcconfig"; sourceTree = "<group>"; };
+		98810AC2E1D0E1D930FBCEBF /* libPods-OTTextChatAcceleratorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OTTextChatAcceleratorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03C51021E49304700C8A69A /* browser-demo-textchat.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "browser-demo-textchat.html"; sourceTree = "<group>"; };
 		A03C51041E49331D00C8A69A /* OTTextChatAcceleratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextChatAcceleratorTests.m; sourceTree = "<group>"; };
 		A03C51061E4933B800C8A69A /* OTTextChatTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextChatTests.m; sourceTree = "<group>"; };
@@ -133,6 +140,7 @@
 		A0C142BA1E958B5E000120E4 /* OTTextChatUserInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTextChatUserInterface.m; sourceTree = "<group>"; };
 		A0DD4FEE1D56725D00DA719B /* CustomTextChatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextChatTableViewController.h; sourceTree = "<group>"; };
 		A0DD4FEF1D56725D00DA719B /* CustomTextChatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextChatTableViewController.m; sourceTree = "<group>"; };
+		AA27C8A30A2F0D8E254F8B20 /* libPods-OTTextChatAccelerator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OTTextChatAccelerator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EF12E921F1D30D13C75F48F /* libPods-OTTextChatAccelerator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,12 +163,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E1D3C4F20A33DAA65CDD04 /* libPods-OTTextChatAcceleratorTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		947DAD5A6765443425BF4359 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA27C8A30A2F0D8E254F8B20 /* libPods-OTTextChatAccelerator.a */,
+				98810AC2E1D0E1D930FBCEBF /* libPods-OTTextChatAcceleratorTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		979FB24ED3C4926F64D9619C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				120404A92851B02AEB6CBB2F /* Pods-OTTextChatAccelerator.debug.xcconfig */,
+				09E532CF8929126918B1D69A /* Pods-OTTextChatAccelerator.release.xcconfig */,
+				742B56559D9BE67219DFCD07 /* Pods-OTTextChatAcceleratorTests.debug.xcconfig */,
+				85D9AEE880B62BC0A22C50B9 /* Pods-OTTextChatAcceleratorTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A04AAA281E4E9E220071A002 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +254,8 @@
 				A0905E351D1D946300004217 /* OTTextChatAcceleratorBundle */,
 				A0905E3E1D1D946300004217 /* OTTextChatAcceleratorTests */,
 				A07B96901D1B6273002397EE /* Products */,
+				979FB24ED3C4926F64D9619C /* Pods */,
+				947DAD5A6765443425BF4359 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -300,10 +333,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A061B9851D1D98FA0020DDD8 /* Build configuration list for PBXNativeTarget "OTTextChatAccelerator" */;
 			buildPhases = (
+				A3C6678419EC8229E2FB3E50 /* [CP] Check Pods Manifest.lock */,
 				A061B96D1D1D98FA0020DDD8 /* Sources */,
 				A061B96E1D1D98FA0020DDD8 /* Frameworks */,
 				A061B96F1D1D98FA0020DDD8 /* Resources */,
 				A061B9991D1D990D0020DDD8 /* Embed Frameworks */,
+				90DB5CA15050EB0AC439466E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -335,9 +370,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A061B9B01D1D99680020DDD8 /* Build configuration list for PBXNativeTarget "OTTextChatAcceleratorTests" */;
 			buildPhases = (
+				7C4309B1C6AD41B028AE3424 /* [CP] Check Pods Manifest.lock */,
 				A061B9A41D1D99680020DDD8 /* Sources */,
 				A061B9A51D1D99680020DDD8 /* Frameworks */,
 				A061B9A61D1D99680020DDD8 /* Resources */,
+				CB3E47582EB7401C8E21EE3E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -433,6 +470,89 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C4309B1C6AD41B028AE3424 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OTTextChatAcceleratorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90DB5CA15050EB0AC439466E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OTTextChatAccelerator/Pods-OTTextChatAccelerator-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OTTextChatAccelerator/Pods-OTTextChatAccelerator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3C6678419EC8229E2FB3E50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OTTextChatAccelerator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB3E47582EB7401C8E21EE3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OTTextChatAcceleratorTests/Pods-OTTextChatAcceleratorTests-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OTTextChatAcceleratorTests/Pods-OTTextChatAcceleratorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A061B96D1D1D98FA0020DDD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -507,6 +627,7 @@
 /* Begin XCBuildConfiguration section */
 		A061B9861D1D98FA0020DDD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 120404A92851B02AEB6CBB2F /* Pods-OTTextChatAccelerator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
@@ -521,6 +642,7 @@
 		};
 		A061B9871D1D98FA0020DDD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09E532CF8929126918B1D69A /* Pods-OTTextChatAccelerator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
@@ -569,6 +691,7 @@
 		};
 		A061B9B11D1D99680020DDD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 742B56559D9BE67219DFCD07 /* Pods-OTTextChatAcceleratorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
@@ -582,6 +705,7 @@
 		};
 		A061B9B21D1D99680020DDD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85D9AEE880B62BC0A22C50B9 /* Pods-OTTextChatAcceleratorTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
