@@ -17,18 +17,18 @@ Pod::Spec.new do |s|
   s.source_files = 'OTTextChatAccelerator/**/*'
 
   s.resource_bundles = {
-    'OTTextChatAcceleratorBundle' => ['OTTextChatAcceleratorBundle/**/*.{png,xib}']
+    'OTTextChatAcceleratorBundle' => ['OTTextChatAcceleratorBundle/**/*.xib', 'OTTextChatAcceleratorBundle/Assets.xcassets']
   }
 
   s.static_framework = true
   s.dependency 'OTAcceleratorCore', '2.0.0'
 
-  s.subspec 'Core' do |s|
-    s.source_files = 'OTTextChatAccelerator/Constant.h',
-                        'OTTextChatAccelerator/OTTextChat.h',
-                        'OTTextChatAccelerator/OTTextChat.m',
-                        'OTTextChatAccelerator/OTTextMessage_Private.h',
-                        'OTTextChatAccelerator/OTTextMessage.h',
-                        'OTTextChatAccelerator/OTTextMessage.m'
-  end
+  # s.subspec 'Core' do |s|
+  #   s.source_files = 'OTTextChatAccelerator/Constant.h',
+  #                       'OTTextChatAccelerator/OTTextChat.h',
+  #                       'OTTextChatAccelerator/OTTextChat.m',
+  #                       'OTTextChatAccelerator/OTTextMessage_Private.h',
+  #                       'OTTextChatAccelerator/OTTextMessage.h',
+  #                       'OTTextChatAccelerator/OTTextMessage.m'
+  # end
 end
