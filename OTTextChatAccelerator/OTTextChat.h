@@ -5,7 +5,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OTAcceleratorSession.h"
+#import <OTAcceleratorCore/OTAcceleratorSession.h>
 #import "OTTextMessage.h"
 
 /**
