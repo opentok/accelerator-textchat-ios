@@ -57,6 +57,12 @@
     
     [self.textChatInputView.sendButton addTarget:self action:@selector(sendTextMessage) forControlEvents:UIControlEventTouchUpInside];
     [self configureCountLabel];
+    
+    if (@available(iOS 13, *)) {
+        self.view.backgroundColor = [UIColor systemBackgroundColor];
+    } else {
+        self.view.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 - (void)sendTextMessage {
@@ -70,6 +76,7 @@
     countLabel.text = [NSString stringWithFormat:@"%@", @(maximumTextMessageLength)];
     countLabel.textAlignment = NSTextAlignmentCenter;
     countLabel.font = [UIFont systemFontOfSize:10.0f];
+    countLabel.textColor = [UIColor darkGrayColor];
     [self.textChatInputView.textField addSubview:countLabel];
     
     [NSLayoutConstraint constraintWithItem:countLabel
@@ -134,7 +141,7 @@
 
 
 -(void)updateLabel:(NSUInteger)Charlength {
-    countLabel.textColor = [UIColor blackColor];
+    countLabel.textColor = [UIColor darkGrayColor];
     
     NSUInteger charLeft = maximumTextMessageLength - Charlength;
     NSUInteger closeEnd = round(maximumTextMessageLength * .1);

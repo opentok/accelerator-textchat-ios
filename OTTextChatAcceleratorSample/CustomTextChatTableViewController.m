@@ -87,7 +87,7 @@
         
         if (!error) {
             if (signal == OTTextChatConnectionEventSignalDidConnect) {
-                [senderIdentifiers addObject:self.textChat.selfConnection.connectionId];
+                [self->senderIdentifiers addObject:self.textChat.selfConnection.connectionId];
             }
             else if (signal == OTTextChatConnectionEventSignalDidDisconnect) {
                 NSLog(@"Text Chat is stopped");

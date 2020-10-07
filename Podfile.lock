@@ -1,28 +1,28 @@
 PODS:
-  - OpenTok (2.16.1)
-  - OTAcceleratorCore (1.1.9):
-    - OpenTok (= 2.16.1)
-    - OTKAnalytics (= 2.1.0)
-    - SVProgressHUD (= 2.2.1)
-  - OTKAnalytics (2.1.0)
-  - SVProgressHUD (2.2.1)
+  - OpenTok (2.18.0)
+  - OTAcceleratorCore (2.0.0):
+    - OpenTok (= 2.18.0)
+    - OTKAnalytics (= 2.1.2)
+    - SVProgressHUD (= 2.2.5)
+  - OTKAnalytics (2.1.2)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - OTAcceleratorCore (= 1.1.9)
+  - OTAcceleratorCore (= 2.0.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - OpenTok
     - OTAcceleratorCore
     - OTKAnalytics
     - SVProgressHUD
 
 SPEC CHECKSUMS:
-  OpenTok: 556374577b66cbf791190c84612346c8f3997c9e
-  OTAcceleratorCore: 8b95e0181957c1a12b8efaacca9bf5a784d867c4
-  OTKAnalytics: d959cb9037564ce382cf79f1e43d0bf03a9dcd60
-  SVProgressHUD: db27c54e6e18bc903341661fc9feb55e04905cc4
+  OpenTok: bf4c81ff741e7976542c61b8f317882f8076eede
+  OTAcceleratorCore: 1c609b99a97c60d0e67519bbede296232d21af0f
+  OTKAnalytics: 2de2f8971b5af7f313882ada0b1eae25104296f4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 70e634c2d9486771a47c1f3e0ff7725aaff5f394
+PODFILE CHECKSUM: 4bbde416f7819a82e80a19449d70fb51bc46851d
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.9.3
