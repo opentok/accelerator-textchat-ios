@@ -10,7 +10,7 @@
 #import "OTTextChatTableViewCell.h"
 #import "OTTextChatNavigationBar_Private.h"
 
-#import "OTAcceleratorSession.h"
+#import <OTAcceleratorCore/OTAcceleratorSession.h>
 
 #import "OTTextChatAcceleratorBundle.h"
 #import "Constant.h"
@@ -49,6 +49,8 @@
     self.tableView.dataSource = self;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 130.0;
+    
+    self.textChatInputView.textField.textColor = [UIColor darkGrayColor];
     
     [self loadTableViewCells];
     typeOfTextChatTableView = [self.tableView.textChatTableViewDelegate typeOfTextChatTableView:self.tableView];
@@ -113,11 +115,11 @@
                                                   usingBlock:^(NSNotification *notification) {
                                                       
                                                       NSDictionary* info = [notification userInfo];
-                                                      CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+                                                      CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
                                                       double duration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
                                                       [UIView animateWithDuration:duration animations:^{
-                                                          
-                                                          weakSelf.bottomViewLayoutConstraint.constant = kbSize.height;
+                                                    
+                                                          weakSelf.bottomViewLayoutConstraint.constant = kbSize.height + self.view.safeAreaInsets.bottom;
                                                       } completion:^(BOOL finished) {
                                                           
                                                           [weakSelf scrollTextChatTableViewToBottom];
@@ -133,9 +135,14 @@
                                                       double duration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
                                                       [UIView animateWithDuration:duration animations:^{
                                                           
-                                                          weakSelf.bottomViewLayoutConstraint.constant = 0;
+                                                          weakSelf.bottomViewLayoutConstraint.constant = self.view.safeAreaInsets.bottom;
                                                       }];
                                                   }];
+}
+
+- (void)viewSafeAreaInsetsDidChange {
+    [super viewSafeAreaInsetsDidChange];
+    self.bottomViewLayoutConstraint.constant = self.view.safeAreaInsets.bottom;
 }
 
 - (void)viewDidLayoutSubviews {
