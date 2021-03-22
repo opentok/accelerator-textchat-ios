@@ -1,6 +1,6 @@
 # Text Chat Accelerator Pack iOS
 
-[![Build Status](https://travis-ci.org/opentok/accelerator-textchat-ios.svg?branch=master)](https://travis-ci.org/opentok/accelerator-textchat-ios)
+[![Build Status](https://travis-ci.org/opentok/accelerator-textchat-ios.svg?branch=main)](https://travis-ci.org/opentok/accelerator-textchat-ios)
 [![Version Status](https://img.shields.io/cocoapods/v/OTTextChatAccelerator.svg)](https://cocoapods.org/pods/OTTextChatAccelerator)
 [![license MIT](https://img.shields.io/cocoapods/l/OTTextChatAccelerator.svg)](https://cocoapods.org/pods/OTTextChatAccelerator)
 [![Platform](https://img.shields.io/cocoapods/p/OTTextChatAccelerator.svg)](https://cocoapods.org/pods/OTTextChatAccelerator)
